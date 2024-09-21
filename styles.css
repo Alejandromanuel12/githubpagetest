@@ -1,0 +1,105 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff5f6d, #ffc371); /* Degradado épico */
+    color: white;
+}
+
+/* Contenedor Principal */
+.container, .message-container {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo translúcido */
+    border-radius: 15px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.container:hover, .message-container:hover {
+    transform: scale(1.05);
+}
+
+/* Título */
+h1 {
+    font-size: 4rem;
+    font-family: 'Monoton', cursive; /* Fuente llamativa */
+    background: linear-gradient(to right, #f9d423, #ff4e50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    animation: glowing 2s infinite alternate;
+}
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px #f9d423, 0 0 10px #ff4e50, 0 0 15px #f9d423; }
+    100% { text-shadow: 0 0 20px #f9d423, 0 0 30px #ff4e50, 0 0 40px #ff4e50; }
+}
+
+/* Botón */
+button {
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.4);
+}
+
+button:hover {
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+    transform: scale(1.1);
+    box-shadow: 0px 5px 25px rgba(255, 105, 180, 0.6);
+}
+
+/* Página del mensaje */
+.message-container h1 {
+    font-size: 3.5rem;
+    font-family: 'Monoton', cursive;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowing 2s infinite alternate;
+}
+
+.message-container img {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        padding: 10px 30px;
+        font-size: 1.2rem;
+    }
+
+    .message-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .message-container img {
+        width: 250px;
+    }
+}
